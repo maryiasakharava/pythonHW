@@ -1,12 +1,11 @@
-
 def sort_list(x):
     n=len(x)
-    if (n<=0):
+    if (n==0):
         print ('Invalid input')
         exit()
     l=0
     while l<n:
-        if type(x[l]) == str:
+        if type(x[l])== str:
             print ('Invalid input, string detected')
             exit()
         l+=1
@@ -22,4 +21,4 @@ def sort_list(x):
         i+=1
     return x
 
-print(sort_list(x=[1,4,8,3]))
+print(sort_list(x=['a',14,6,3,'b']))
