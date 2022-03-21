@@ -16,6 +16,7 @@ lex_sorted = {val[0] : val[1] for val in sorted(dicti.items(), key = lambda x: (
 sorted_d=dict(sorted(lex_sorted.items(),key=operator.itemgetter(1),reverse=True))
 
 count=0
+print('')
 for x,y in sorted_d.items():
     if count<5:
         print(x,":",y)
