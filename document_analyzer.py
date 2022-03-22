@@ -19,7 +19,7 @@ count=0
 print('')
 for x,y in sorted_d.items():
     if count<5:
-        print(x,' : ',y)
+        print(x,':',y)
     else:
         break
     count+=1
