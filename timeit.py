@@ -9,7 +9,7 @@ def calculate_time(func):
         to_execute = fn(*args, **kwargs)
         end_time = perf_counter()
         execution_time = end_time - start_time
-        print(f 'Total time {execution_time}')
+        print('Total time '+ execution_time)
         return to_execute
     
     return inner
