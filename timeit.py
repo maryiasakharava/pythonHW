@@ -12,7 +12,7 @@ def calculate_time(func):
         finally:
             end_ = int(round(process_time() * 1000)) - start
             print(
-                f"Total execution time {func.__name__}: {end_ if end_ > 0 else 0} ms"
+                f"Total time {end_ if end_ > 0 else 0}"
             )
 
     return timeit_wrapper
