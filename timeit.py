@@ -1,4 +1,5 @@
 from time import time
+from functools import wraps
   
 def calculate_time(func):
     @wraps(func)
