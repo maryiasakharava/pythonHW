@@ -6,7 +6,7 @@ from time import perf_counter
 def calculate_time(func):
     def inner(*args, **kwargs):
         start_time = perf_counter()
-        to_execute = fn(*args, **kwargs)
+        to_execute = func(*args, **kwargs)
         end_time = perf_counter()
         execution_time = end_time - start_time
         print('Total time '+ execution_time)
