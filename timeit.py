@@ -1,6 +1,6 @@
 from functools import wraps
 from time import time
-def calculate_time(func):
+def calcualte_time(func):
     @wraps(func)
     def _time_it(*args, **kwargs):
         starttime = int(round(time() * 1000))
