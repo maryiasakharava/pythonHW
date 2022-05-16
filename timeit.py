@@ -1,5 +1,5 @@
 from time import time
-from functools import wraps
+from time import sleep
 from time import process_time
 
   
@@ -11,7 +11,6 @@ def calculate_time(func):
         execution_time = end_time - start_time
         print('Total time '+ execution_time)
         return to_execute
-    
     return inner
    
 
