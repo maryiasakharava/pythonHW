@@ -1,16 +1,13 @@
-from time import time
-from time import sleep
-from time import perf_counter
+import time
+from functools import wraps
 
-  
 def calculate_time(func):
-    def inner(*args, **kwargs):
-        start_time = perf_counter()
-        to_execute = func(*args, **kwargs)
-        end_time = perf_counter()
-        execution_time = end_time - start_time
-        print('Total time '+ execution_time)
-        return to_execute
-    return inner
-   
-
+    @wraps(func)
+    def calculate_time_wrapper(*args, **kwargs):
+        starting = time.perf_counter()
+        result = func(*args, **kwargs)
+        end = time.perf_counter()
+        total = end - starting
+        print(f'Total time {total:.4f}')
+        return result
+    return calculate_time_wrapper
