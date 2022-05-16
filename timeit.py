@@ -4,17 +4,14 @@ from time import process_time
 
   
 def calculate_time(func):
-    @wraps(func)
-    def timeit_wrapper(*args, **kwargs):
-        start = int(round(process_time() * 1000))
-        try:
-            return func(*args, **kwargs)
-        finally:
-            end_ = int(round(process_time() * 1000)) - start
-            print(
-                f"Total time {end_ if end_ > 0 else 0}"
-            )
-
-    return timeit_wrapper
+   def inner(*args, **kwargs):
+        start_time = perf_counter()
+        to_execute = fn(*args, **kwargs)
+        end_time = perf_counter()
+        execution_time = end_time - start_time
+        print(f 'Total time {execution_time}')
+        return to_execute
+    
+    return inner
    
 
