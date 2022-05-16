@@ -1,6 +1,6 @@
 from time import time
 from time import sleep
-from time import process_time
+from time import perf_counter
 
   
 def calculate_time(func):
