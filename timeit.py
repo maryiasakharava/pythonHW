@@ -13,6 +13,6 @@ def calculate_time(func):
                 f"Total execution time {func.__name__}: {end_ if end_ > 0 else 0} ms"
             )
 
-    return _time_it
+    return timeit_wrapper
    
 
